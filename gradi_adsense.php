@@ -83,11 +83,11 @@ class gradi_adsense extends Module{
         $cta_text_value = Configuration::get('CTA_TEXT_GRADI_AD');
         $cta_url_value = Configuration::get('CTA_URL_GRADI_AD');
 
-        $this->smarty->assign('image_value', $image_value);
-        $this->smarty->assign('title_value', $title_value);
-        $this->smarty->assign('description_value', $description_value);
-        $this->smarty->assign('cta_text_value', $cta_text_value);
-        $this->smarty->assign('cta_url_value', $cta_url_value);
+        $this->context->smarty->assign('image_value', $image_value);
+        $this->context->smarty->assign('title_value', $title_value);
+        $this->context->smarty->assign('description_value', $description_value);
+        $this->context->smarty->assign('cta_text_value', $cta_text_value);
+        $this->context->smarty->assign('cta_url_value', $cta_url_value);
 
         return $this->display(__FILE__, 'displayHome.tpl');
     }
